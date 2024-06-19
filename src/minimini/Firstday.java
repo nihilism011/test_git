@@ -1,4 +1,4 @@
-package TestAll;
+package minimini;
 
 import java.util.Scanner;
 
