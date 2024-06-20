@@ -1,4 +1,4 @@
-//package TestAll;
+package eachDayLastTest;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -37,10 +37,10 @@ public class Day3LastTest {
         System.out.println();
 
 
-        System.out.println("4. 1부터 100 사이의 랜덤한 숫자를 생성하고,/n" +
-                "숫자를 입력 받아 랜덤한 숫자와 비교하여, \n" +
-                "큰 수 인지 아닌지 판별하기\n" +
-                "(ex, 랜덤 수 : 35, 입력 수 : 40 일 경우 '입력한 수가 더 큽니다' 출력, 반대일 경우 작다고 출력)");
+        System.out.println("""
+                4. 1부터 100 사이의 랜덤한 숫자를 생성하고,
+                숫자를 입력 받아 랜덤한 숫자와 비교하여, 큰 수 인지 아닌지 판별하기\s
+                (ex, 랜덤 수 : 35, 입력 수 : 40 일 경우 '입력한 수가 더 큽니다' 출력, 반대일 경우 작다고 출력)""");
         int d = ran.nextInt(100) + 1;
         System.out.print("숫자 입력: ");
         int e = scan.nextInt();
@@ -55,9 +55,7 @@ public class Day3LastTest {
         System.out.println("6. 1부터 30까지 10~19의 숫자를 제외하고 화면에 출력하시오.\n" +
                 "(ex, 1 2 3 4 5 6 7 8 9 20 21 22 ... 30)");
         for (int i = 1; i < 31; i++) {
-            if (i >= 10 && i <= 19) {
-                continue;
-            } else {
+            if (i < 10 || i > 19) {
                 System.out.print(i + " ");
             }
         }
@@ -67,22 +65,21 @@ public class Day3LastTest {
         System.out.println("7. while 문을 이용하여 2단부터 9단까지 구구단을 출력하시오.\n" +
                 "단, 4단과 8단은 출력하지 말 것.");
         int j = 2;
-        while(j<10){
-            if(j==4||j==8){
+        while (j < 10) {
+            if (j % 4 == 0) {
                 j++;
                 continue;
-            }else{
+            } else {
                 System.out.println();
-                System.out.println("----"+j+"단----");
+                System.out.println("----" + j + "단----");
                 int k = 1;
-                while(k<10){
+                while (k < 10) {
                     System.out.print(j + "X" + k + "=" + j * k + "  ");
                     k++;
                 }
             }
             j++;
         }
-
 
 
     }

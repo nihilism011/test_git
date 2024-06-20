@@ -9,7 +9,7 @@ public class ClassEx {
     public String getNme(){     //리턴값이 있기때문에 void가 없는 메서드
         return name;
     }
-    public void setHeight(double high){     //리턴값이 없는 void 메서드
+    public void setHeightHeight(double high){     //리턴값이 없는 void 메서드
         height = high;
     }
 
