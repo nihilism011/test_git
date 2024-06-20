@@ -8,6 +8,7 @@ public class Arr_5 {
             for(int j = 0;j<arr[i];j++){
                 System.out.print(star);
             }
+
             System.out.println();
         }
 

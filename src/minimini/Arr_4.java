@@ -7,7 +7,7 @@ public class Arr_4 {
         int[] arr = {-1, -4, -5, -9, -2, -20, 5};
         //배열에서 가장 큰 숫자 찾기
         //가장 큰 숫자는 oo입니다. 출력
-
+        System.out.println();
         int j = arr[0];
         int k = arr[0];
         for (int i = 0; i < arr.length; i++) {
