@@ -17,7 +17,6 @@ public class Q7 {
             int computer = ran.nextInt(3);
             String p = "";
             String c = " ";
-
             switch (player) {
                 case 0:
                     p = "가위";
