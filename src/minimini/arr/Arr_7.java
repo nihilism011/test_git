@@ -1,6 +1,6 @@
-package minimini;
+package minimini.arr;
 
-public class arr_7 {
+public class Arr_7 {
     public static void main(String[] args) {
         int[] arr = {2, 5, -2, 10, 33, 22, 45};
         int sum = 0;

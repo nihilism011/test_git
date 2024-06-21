@@ -1,9 +1,9 @@
-package minimini;
+package minimini.arr;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Array_3 {
+public class Arr_3 {
     public static void main(String[] args) {
         //크기가 100인 배열에 1부터 100까지 순서대로 숫자
         Scanner scan = new Scanner(System.in);

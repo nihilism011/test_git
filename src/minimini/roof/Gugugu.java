@@ -1,4 +1,4 @@
-package minimini;
+package minimini.roof;
 
 import java.util.Random;
 import java.util.Scanner;

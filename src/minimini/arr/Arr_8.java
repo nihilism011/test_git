@@ -1,6 +1,6 @@
-package minimini;
+package minimini.arr;
 
-public class arr_8 {
+public class Arr_8 {
     public static void main(String[] args) {
         int[] arr = {10, 30, -5, -8, 17};
         //양수들의 평균

@@ -1,8 +1,8 @@
-package minimini;
+package minimini.arr;
 
 import java.util.Arrays;
 
-public class Array_1 {
+public class Arr_1 {
 
     public static void main(String[] args) {
         int[] num = new int[3]; //      [0,0,0]

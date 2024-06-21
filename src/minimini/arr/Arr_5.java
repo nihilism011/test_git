@@ -1,4 +1,4 @@
-package minimini;
+package minimini.arr;
 
 import java.util.Arrays;
 
