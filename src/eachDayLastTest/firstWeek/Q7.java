@@ -1,7 +1,5 @@
 package eachDayLastTest.firstWeek;
 
-import com.sun.source.tree.ContinueTree;
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -9,42 +7,93 @@ public class Q7 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Random ran = new Random();
-        int pw = 0, cw = 0, vs = 0;
-        String[] rock = {"가위", "바위", "보"};
-        while(true) {
+        int pw = 0;
+        int cw = 0;
+        int vs = 0;
+
+        for (int i = 0; i < 1; i++) {
             System.out.println("가위(0), 바위(1) 보(2) 입력 :");
             int player = sc.nextInt();
             int computer = ran.nextInt(3);
-            if(player<0||player>2){
-                System.out.println("잘못된 입력입니다.");
-                continue;
+            String p = "";
+            String c = " ";
+            switch (player) {
+                case 0:
+                    p = "가위";
+                    break;
+                case 1:
+                    p = "바위";
+                    break;
+                case 2:
+                    p = "보";
+                    break;
+                default:
             }
-            String p = rock[player];
-            String c = rock[computer];
-
+            switch (computer) {
+                case 0:
+                    c = "가위";
+                    break;
+                case 1:
+                    c = "바위";
+                    break;
+                case 2:
+                    c = "보";
+                    break;
+                default:
+            }
             System.out.println("Player : " + p);
             System.out.println("컴퓨터 : " + c);
             if (player == computer) {
                 System.out.println("비겼습니다.");
                 vs++;
-            } else if ((player == 0 && computer == 1) || (player == 1 && computer == 2) || (player == 2 && computer == 0)) {
-                System.out.println("컴퓨터 win!");
-                cw++;
-            } else {
-                System.out.println("Player win!");
-                pw++;
+                break;
+            } else if (player == 0) {
+                switch (computer) {
+                    case 1:
+                        System.out.println("컴퓨터 win!");
+                        cw++;
+                        break;
+                    case 2:
+                        System.out.println("Player win!");
+                        pw++;
+                        break;
+                }
+            } else if (player == 1) {
+                switch (computer) {
+                    case 2:
+                        System.out.println("컴퓨터 win!");
+                        cw++;
+                        break;
+                    case 0:
+                        System.out.println("Player win!");
+                        pw++;
+                        break;
+                }
+
+
+            } else if (player == 2) {
+                switch (computer) {
+                    case 0:
+                        System.out.println("컴퓨터 win!");
+                        cw++;
+                        break;
+                    case 1:
+                        System.out.println("Player win!");
+                        pw++;
+                        break;
+                }
             }
-
-
             System.out.println("Player ==>" + pw + "승 " + cw + "패 " + vs + "무");
             System.out.println("재대결(1), 종료(2)");
-            if (sc.nextInt() == 1) {
-                continue;
-            } else
-                System.out.println("종료 되었습니다.");
-            break;
-        }
+            int coin = sc.nextInt();
+            switch (coin) {
+                case 1:
+                    i--;
+                    break;
+                case 2:
+                    System.out.println("종료 되었습니다.");
+            }
 
+        }
     }
 }
-
