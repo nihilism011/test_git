@@ -1,7 +1,7 @@
 package eachDayLastTest.Class2024_06_25;
 
 public class ColorPoint extends Point {
-    String color;
+    private String color;
 
     ColorPoint(int x, int y, String color) {
         super(x, y);
@@ -9,13 +9,11 @@ public class ColorPoint extends Point {
     }
 
     ColorPoint() {
-        super(0, 0);
-        this.color = "black";
+        this(0,0,"Black");
     }
 
     ColorPoint(int x, int y) {
-        super(x, y);
-        this.color = "black";
+        this(x,y,"Black");
     }
 
     void setColor(String color) {
