@@ -2,7 +2,7 @@ package minimini.끝말잇기;
 
 import java.util.Scanner;
 
-public class charAttest {
+public class CharAtTest {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String start = "자바";

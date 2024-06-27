@@ -1,5 +1,4 @@
 package minimini.물고기잡기게임;
-
 public abstract class GameObject { // 추상 클래스
     protected int distance; // 한 번 이동 거리
     protected int x, y; // 현재 위치(화면 맵 상의 위치)
