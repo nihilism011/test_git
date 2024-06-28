@@ -1,4 +1,4 @@
-package eachDayLastTest;
+package eachDayLastTest.firstWeek;
 
 import java.util.Random;
 import java.util.Scanner;

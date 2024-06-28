@@ -9,8 +9,9 @@ public class Q2_main {
         ColorPoint cp = new ColorPoint(10, 10); // (10,10) 위치의 BLACK 색 점
         cp.setXY(5, 5);
         cp.setColor("RED");
-        System.out.println(cp.toString() + "입니다.");
+        System.out.println(cp + "입니다.");
         {
         }
+
     }
 }
