@@ -21,9 +21,11 @@ public class ListHash_ex_member {
                 map.put("adrr",sc.next());
                 System.out.print("핸드폰 번호를 입력하세요 :");
                 map.put("phone",sc.next());
+
                 hash.put((String) map.get("name"),map);
                 System.out.println();
                 System.out.println("저장되었습니다.");
+
             } else if (input.equals("2")) {
                 System.out.println("검색할 이름을 입력하세요 : ");
                 String name = sc.next();

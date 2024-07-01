@@ -5,7 +5,7 @@ public class Game {
     public static final int MAX_Y = 10;
     public static final int BEAR_D = 1;
     public static final int FISH_D = 2;
-    public static final int FISH_PER = 30;
+    public static final int FISH_PER = 12;
     public static void main(String[] args) {
         GameStage stage = new GameStage();
         Bear bear = new Bear();

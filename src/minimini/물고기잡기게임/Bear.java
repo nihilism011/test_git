@@ -27,8 +27,9 @@ public class Bear extends GameObject {
                 if (y > distance - 1) y -= distance;
             }
             default -> System.out.println("잘못된 입력");
-        }
-    } // 이동한 후의 새로운 위치로 x, y 변경
+
+        } // 이동한 후의 새로운 위치로 x, y 변경
+    }
 
 
     public char getShape() {
