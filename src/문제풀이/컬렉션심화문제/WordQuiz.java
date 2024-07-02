@@ -1,18 +1,13 @@
 package 문제풀이.컬렉션심화문제;
 
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.Vector;
+import java.util.*;
 
 public class WordQuiz {
     Random ran = new Random();
-
-    private String name;
+    private int b;
     private Vector<Word> v;
 
-
     public WordQuiz(String name) {
-        this.name = name;
         v = new Vector<Word>();
         v.add(new Word("love", "사랑"));
         v.add(new Word("animal", "동물"));
@@ -31,40 +26,31 @@ public class WordQuiz {
         v.add(new Word("example", "보기"));
         v.add(new Word("eye", "눈"));
         v.add(new Word("statue", "조각상"));
+        System.out.println("\"" + name + "\"의 단어 테스트를 시작합니다. -1을 입력하면 종료합니다.");
+        System.out.println("현재 " + v.size() + "개의 단어가 들어 있습니다.");
     }
 
-    public boolean quizOk(int a, int b) {
-        return a == b - 1;
+    public boolean quizOk(int a) {
+        return a == b + 1;
     }
 
-    public int quiz() {
-        ArrayList<String> list = new ArrayList<>();
-        int an = ran.nextInt(4);
-        int[] a = new int[4];
-        for (int i = 0; i < 4; i++) {
-            a[i] = ran.nextInt(17);
-            for (int j = 0; j < i; j++) {
-                if (a[i] == a[j]) i--;
-            }
+    public void quiz() {
+        final int bogi = 4;
+        ArrayList<Word> list = new ArrayList<>();
+        b = ran.nextInt(bogi);
+        Set<Integer> c = new HashSet<>();
+        while (c.size() != bogi) {
+            c.add(ran.nextInt(v.size()));
         }
 
-        for (int i : a) {
-            list.add(v.get(i).getKorean());
+        for (Integer i : c) {
+            list.add(v.get(i));
         }
-        String str = "";
-        for (int i = 0; i < v.size(); i++) {
-            if (v.get(i).getKorean().equals((list.get(an)))) {
-                str = v.get(i).getEnglish();
-            }
+        System.out.println(list.get(b).getEnglish() + "?");
+        for (int i = 0; i < bogi; i++) {
+            System.out.print("(" + (i + 1) + ")" + list.get(i).getKorean() + " ");
         }
-        System.out.println(str + "?");
 
-
-        for (int i = 0; i < list.size(); i++) {
-            System.out.print("(" + (i + 1) + ")" + list.get(i) + " ");
-        }
-        return an;
 
     }
-
 }
