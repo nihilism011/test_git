@@ -11,13 +11,13 @@ public class Arr_1 {
                     k = false;
                     break;
                 }
+                if (k) {
+                    return z;
+                }
             }
-            if (k) {
-                return z;
-            }
-        }return str;
-    }
-}
+        }
+        return str;
+    }}
 
 
 
