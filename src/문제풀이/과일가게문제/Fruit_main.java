@@ -9,19 +9,25 @@ public class Fruit_main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        HashMap<String, Fruit> fruitmap = new HashMap<>();
+        HashMap<String, Fruit> fruitmap = new HashMap<>(); //Fruit 과일들을 fruitmap 해쉬맵에 <이름,과일객체>로 저장할곳
+
         while (true) {
             System.out.println("== (1)과일 추가 (2) 판매 (3) 개수확인 (그외) 종료");
             System.out.print("메뉴 선택 : ");
             String in = sc.next();      //메뉴 번호 입력
+            //여기까지 고정
 
-            if (!in.equals("1") && !in.equals("2") && !in.equals("3")) {    //1,2,3 외의 숫자가 들어올경우 종료.
+            if (!in.equals("1") && !in.equals("2") && !in.equals("3")) {
                 System.out.println("종료");
                 break;
             }
+            //1,2,3 외의 다른 입력일 경우 종료 . 여기까지도 일단 고정
+
             System.out.print("과일명 입력  : ");
             String name = sc.next();
-            Fruit fruit;
+            Fruit fruit; //Fruti 객체 미리 선언.
+            //1,2,3의 어떤 메뉴라도 과일명 입력이 필수
+
             if (in.equals("1") && fruitmap.get(name) == null) { //메뉴1번을 선택했을때 과일이 없는 경우 과일 추가
                 System.out.print("가격 입력 : ");
                 int price = sc.nextInt();       //가격 입력

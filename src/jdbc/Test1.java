@@ -11,6 +11,7 @@ public class Test1 {
             System.out.print("숫자 입력 : ");
             int in = sc.nextInt();
             boolean flg = true;
+
             for (int a : arr) {
                 if (in == a ) {
                     flg = false;
