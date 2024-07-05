@@ -15,7 +15,14 @@ public class MouseListenerEx extends JFrame {
         setTitle("Mouse 이벤트 예제");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Container c = getContentPane();
-        c.addMouseListener(new MyMouseListener());
+        c.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                int x = e.getX();
+                int y = e.getY();
+                la.setLocation(x,y);
+            }
+        });
         c.setLayout(null);
         la.setSize(50, 20);
         la.setLocation(30, 30);

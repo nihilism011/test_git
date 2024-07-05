@@ -17,6 +17,8 @@ public class IndepC extends JFrame {
         JButton btn = new JButton("Action");
 
         btn.addActionListener(new MyActionListener()); // Action 리스너 달기
+
+
         c.add(btn);
         setSize(350, 150);
         setVisible(true);
