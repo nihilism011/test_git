@@ -1,0 +1,15 @@
+7월 10일 7~8교시 자바 Test
+문제 수 : 7문제
+
+1. 클래스와 관련된 이론 문제
+2. 조건문,반복문
+    ex)1~30의 숫자 중 3의 배수만 출력.
+3. 조건문과 반복문
+    ex)랜덤 구구단.
+4. 상속관계에서 생성자 호출
+    ex)super클래스의 기본생성자가 없을때
+5. static 메소드와 non_static 메소드의 생성 및 호출
+6. 컬렉션 - 리스트와 해시맵
+    ex)ArrayList<int> , HashMap<int,String>
+        ArrayList<HashMap<String,String>>
+7. 비공개
