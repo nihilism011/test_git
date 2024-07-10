@@ -14,13 +14,18 @@ public class Test6 {
             System.out.print((i+1) + "번째 사람 이름 : ");
             map.put("name", sc.next());
             while (true) {
-                System.out.print((i+1) + "번째 사람 나이 : ");
-                int age = sc.nextInt();
-                if (age > 0 && age <= 100) {
-                    map.put("age", age);
-                    break;
-                } else {
-                    System.out.println("1~100 사이 값을 입력해주세요.");
+                try {
+                    System.out.print((i+1) + "번째 사람 나이 : ");
+                    String inputAge = sc.next();
+                    int age = Integer.parseInt(inputAge);
+                    if (age > 0 && age <= 100) {
+                        map.put("age", age);
+                        break;
+                    } else {
+                        System.out.println("1~100 사이 값을 입력해주세요.");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("숫자를 입력해주세요.");
                 }
             }
             System.out.print((i+1) + "번째 사람 주소 : ");

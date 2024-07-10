@@ -21,7 +21,7 @@ public class ArrayManager {
         return sum;
     }
 
-    public int[] makeArr() {
+    public int[] makeArray() {
         Scanner sc = new Scanner(System.in);
         int[] arr = new int[5];
         for (int i = 0; i < arr.length; i++) {
@@ -32,10 +32,9 @@ public class ArrayManager {
         return arr;
     }
 
-
     public static void main(String[] args) {
         ArrayManager u = new ArrayManager();
-        int[] arr = u.makeArr();
+        int[] arr = u.makeArray();
         System.out.println(Arrays.toString(arr));
 
         int max = u.arrmax(arr);
